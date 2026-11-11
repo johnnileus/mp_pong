@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cfyugwepbk47i"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_8cj0n"]
+
+[node name="Game" type="Node2D" unique_id=1427156244]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=840477807]
+transform = Transform3D(1, 0, 0, 0, 0.35243496, 0.9358363, 0, -0.9358363, 0.35243496, 0, 11.107897, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2009320876]
+mesh = SubResource("PlaneMesh_8cj0n")
