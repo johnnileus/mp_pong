@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cs5keu0ntwr26"]
+
+[ext_resource type="Script" uid="uid://c0xq0cdwnajws" path="res://scripts/Paddle.cs" id="1_lg73m"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7wxnq"]
+size = Vector3(1.0019531, 0.33569336, 0.35058594)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7wxnq"]
+size = Vector3(1, 0.33032227, 0.3479004)
+
+[node name="Paddle" type="Node3D" unique_id=157495520 node_paths=PackedStringArray("_left", "_right", "_paddle")]
+script = ExtResource("1_lg73m")
+_left = NodePath("left")
+_right = NodePath("right")
+_speed = 1.0
+_paddle = NodePath("Paddle")
+
+[node name="Paddle" type="CharacterBody3D" parent="." unique_id=1486536550]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Paddle" unique_id=1633062788]
+shape = SubResource("BoxShape3D_7wxnq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Paddle" unique_id=171220099]
+mesh = SubResource("BoxMesh_7wxnq")
+
+[node name="left" type="Node3D" parent="." unique_id=921922202]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.144292, 0, 0)
+
+[node name="right" type="Node3D" parent="." unique_id=1321847726]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4067612, 0, 0)

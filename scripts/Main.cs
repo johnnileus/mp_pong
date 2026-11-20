@@ -3,7 +3,6 @@ using Godot;
 using Godot.Collections;
 using Array = System.Array;
 
-[Tool]
 public partial class Main : Node
 {
 
@@ -18,6 +17,12 @@ public partial class Main : Node
 
     private void GoToGame()
     {
-        GetTree().ChangeSceneToPacked(_startupScene);
+        if (_startupScene != null) {
+            GetTree().ChangeSceneToPacked(_startupScene);
+        }
+        else {
+            Logger.Error("Startup Scene is null");
+        }
     }
+    
 }

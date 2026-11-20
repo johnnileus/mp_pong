@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://t7b0tj7fo7sx"]
+
+[ext_resource type="Script" uid="uid://0k1gg6be8uen" path="res://scenes/Ball.cs" id="1_7s4qf"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_7wxnq"]
+radius = 0.075
+
+[sub_resource type="SphereMesh" id="SphereMesh_7wxnq"]
+
+[node name="ball" type="CharacterBody3D" unique_id=1937600836]
+script = ExtResource("1_7s4qf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=516635368]
+shape = SubResource("SphereShape3D_7wxnq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2029522062]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+mesh = SubResource("SphereMesh_7wxnq")

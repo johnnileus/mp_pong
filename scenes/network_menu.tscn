@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c3wotwe5l3d8o"]
+
+[ext_resource type="Script" uid="uid://87qx4et16k7t" path="res://scenes/NetworkMenu.cs" id="1_7fcso"]
+
+[node name="NetworkMenu" type="Control" unique_id=926354634 node_paths=PackedStringArray("_hostButton", "_joinButton")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7fcso")
+_hostButton = NodePath("Host")
+_joinButton = NodePath("Join")
+
+[node name="Host" type="Button" parent="." unique_id=962494150]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 73.0
+offset_right = 491.0
+offset_bottom = 141.0
+text = "Host
+"
+
+[node name="Join" type="Button" parent="." unique_id=899379274]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 165.0
+offset_right = 492.0
+offset_bottom = 226.0
+text = "Join
+"
